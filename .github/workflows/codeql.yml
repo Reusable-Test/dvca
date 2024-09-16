@@ -80,9 +80,9 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ~/.nuget/packages
-        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+        key: ${{ runner.os }}-nuget
         restore-keys: |
-          ${{ runner.os }}-nuget-
+          ${{ runner.os }}-nuget
     
     - if: matrix.build-mode == 'manual'
       shell: bash
